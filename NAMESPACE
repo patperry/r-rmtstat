@@ -1,0 +1,6 @@
+export( dtw, ptw, qtw, rtw, 
+     	dlbe.max, plbe.max, qlbe.max, rlbe.max,
+        dlbe.spike.eig, plbe.spike.eig, qlbe.spike.eig, rlbe.spike.eig,
+        lbe.max,
+        lbe.spike.eig, 
+        lbe.spike.vec )
