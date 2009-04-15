@@ -1,11 +1,11 @@
-citHeader( "To cite package ’RMT’ in publications use:" )
+citHeader( "To cite package ’RMTstat’ in publications use:" )
 
-desc <- packageDescription( "RMT" )
+desc <- packageDescription( "RMTstat" )
 year <- sub( ".*(2[[:digit:]]{3})-.*", "\\1", desc$Date )
 vers <- paste( "R package version", desc$Version )
 
 citEntry( entry="Manual", 
-          title="RMT: Distributions from Random Matrix Theory", 
+          title="RMTstat: Distributions and Statistics from Random Matrix Theory", 
          author=personList( as.person( "Patrick O. Perry" ),
                             as.person( "Iain M. Johnstone" ),
                             as.person( "Zongming Ma" ),
@@ -17,6 +17,6 @@ citEntry( entry="Manual",
                        "Zongming Ma, and " ,
                        "Morteza Shahram ",
                        "(", year, "). ",
-                       "RMT: Distributions from Random Matrix Theory. ",
+                       "RMT: Distributions and Statistics from Random Matrix Theory. ",
                        vers, ".", 
                        sep="" ) ) 

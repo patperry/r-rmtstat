@@ -1,14 +1,13 @@
-Package:     RMT
+Package:     RMTstat
 Version:     0.1
-Date:        2009-04-08
-Title:       Distributions from Random Matrix Theory
+Date:        2009-04-15
+Title:       Distributions and Statistics from Random Matrix Theory
 Author:      Patrick O. Perry <patperry@gmail.com>, with contributions
              from Iain M. Johnstone, Zongming Ma, and Morteza Shahram.
 Maintainer:  Patrick O. Perry <patperry@gmail.com>
 Description: 
     Functions for working with the Tracy-Widom laws and other distributions 
-    related to the eigenvalues of large Wishart ("Laguerre Beta Ensemble") 
-    matrices.
+    related to the eigenvalues of large Wishart matrices.
     .
     The tables for computing the Tracy-Widom densities and distribution
     functions were computed by Momar Dieng's MATLAB package "RMLab", which
