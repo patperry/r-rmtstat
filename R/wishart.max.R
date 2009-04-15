@@ -1,5 +1,5 @@
 
-lbe.max <- (function() {
+wishart.max.par <- (function() {
     mu <- function( n,p ) {
         n.sqrt <- sqrt( n )
         p.sqrt <- sqrt( p )
@@ -39,9 +39,9 @@ lbe.max <- (function() {
         res
     }
     
-    function( nrow, ncol, var=1, beta=1 ) {
-        n <- nrow
-        p <- ncol
+    function( n.df, p.dim, var=1, beta=1 ) {
+        n <- n.df
+        p <- p.dim
         
         if( beta == 1 ) {
             m <- mu.real( n,p )
@@ -60,8 +60,8 @@ lbe.max <- (function() {
     }
 })()
 
-dlbe.max <- function( x, nrow, ncol, var=1, beta=1, log = FALSE ) {
-    params <- lbe.max( nrow, ncol, var, beta )
+dwishart.max <- function( x, n.df, p.dim, var=1, beta=1, log = FALSE ) {
+    params <- wishart.max.par( n.df, p.dim, var, beta )
     x.tw   <- ( x - params$center )/( params$scale )
     d.tw   <- dtw( x, beta, log )
     d      <- ifelse( log, d.tw - log( params$scale ),
@@ -69,24 +69,24 @@ dlbe.max <- function( x, nrow, ncol, var=1, beta=1, log = FALSE ) {
     d
 }
 
-plbe.max <- function( q, nrow, ncol, var=1, beta=1, 
+pwishart.max <- function( q, n.df, p.dim, var=1, beta=1, 
                       lower.tail = TRUE, log.p = FALSE ) {
-    params <- lbe.max( nrow, ncol, var, beta )
+    params <- wishart.max.par( n.df, p.dim, var, beta )
     q.tw   <- ( q - params$center )/( params$scale )
     p      <- ptw( q.tw, beta, lower.tail, log.p )
     p
 }
 
-qlbe.max <- function( p, nrow, ncol, var=1, beta=1,
+qwishart.max <- function( p, n.df, p.dim, var=1, beta=1,
                       lower.tail = TRUE, log.p = FALSE ) {
-    params <- lbe.max( nrow, ncol, var, beta )
+    params <- wishart.max.par( n.df, p.dim, var, beta )
     q.tw   <- qtw( p, beta, lower.tail, log.p )
     q      <- params$center + q.tw*( params$scale )
     q
 }
 
-rlbe.max <- function( n, nrow, ncol, var=1, beta=1 ) {
-    params <- lbe.max( nrow, ncol, var, beta )
+rwishart.max <- function( n, n.df, p.dim, var=1, beta=1 ) {
+    params <- wishart.max.par( n.df, p.dim, var, beta )
     x.tw   <- rtw( n, beta )
     x      <- params$center + x.tw*( params$scale )
     x

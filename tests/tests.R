@@ -1,5 +1,5 @@
 
-library( RMT )
+library( RMTstat )
 
 testdata <- new.env()
 load( "testdata.rda", envir=testdata )

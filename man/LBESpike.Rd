@@ -56,5 +56,5 @@ rlbe.spike.eig(n, spike, nrow=NA, ncol=NA, var=1)
     1617--1642.
 }
 \author{Patrick O. Perry}
-\seealso{\link{lbe.spike.eig}, \link{LBEMax}}
+\seealso{\link{lbe.spike.eig}, \link{WishartMax}}
 \keyword{distribution}
