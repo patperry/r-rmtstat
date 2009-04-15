@@ -1,6 +1,5 @@
 export( dtw, ptw, qtw, rtw, 
      	dwishart.max, pwishart.max, qwishart.max, rwishart.max,
-        dlbe.spike.eig, plbe.spike.eig, qlbe.spike.eig, rlbe.spike.eig,
         wishart.max.par,
-        lbe.spike.eig, 
-        lbe.spike.vec )
+        dwishart.spike, pwishart.spike, qwishart.spike, rwishart.spike,
+        wishart.spike.par )

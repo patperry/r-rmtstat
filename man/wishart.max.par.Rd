@@ -1,6 +1,6 @@
 \name{wishart.max.par}
 \alias{wishart.max.par}
-\title{The White Wishart Maximum Eigenvalue Centering and Scaling}
+\title{White Wishart Maximum Eigenvalue Centering and Scaling}
 \description{
   Centering and scaling for the maximum eigenvalue from a white Wishart
   matrix (sample covariance matrix) with with \code{n.df} degrees of freedom,

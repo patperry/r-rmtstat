@@ -73,15 +73,15 @@ test.qtw.log.tail <- function( beta ) {
     max( abs( ptw( x, beta, lower.tail=FALSE ) - p ) ) < 5e-8
 }
 
-test.lbe.spike.eig <- function() {
-    nrow   <- 10
-    ncol   <- 99
-    ratio  <- ncol/nrow
+test.wishart.spike.par <- function() {
+    n      <- 10
+    p      <- 99
+    ratio  <- p/n
     var    <- 0.28401
     spike  <- ( sqrt( ratio ) + 0.01 )*var
     center <- ( spike + var )*( 1 + ratio*( var/spike ) )
-    scale  <- ( spike + var )*sqrt( 2*( 1 - ratio*( var/spike )^2 )/nrow )
-    params <- lbe.spike.eig( spike, nrow, ncol, var )
+    scale  <- ( spike + var )*sqrt( 2*( 1 - ratio*( var/spike )^2 )/n )
+    params <- wishart.spike.par( spike, n, p, var )
     
     identical( params, list( center=center, scale=scale ) )
 }
@@ -126,7 +126,7 @@ tests <- list( function() { test.ptw( 1 ) }
              , function() { test.dtw.log( 2 ) }
              , function() { test.dtw.log( 4 ) }
 
-             , function() { test.lbe.spike.eig() }
+             , function() { test.wishart.spike.par() }
              )
 
 test.all <- function() {

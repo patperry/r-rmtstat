@@ -4,7 +4,7 @@
 \alias{pwishart.max}
 \alias{qwishart.max}
 \alias{rwishart.max}
-\title{The Wishart Maximum Eigenvalue Distributions}
+\title{The White Wishart Maximum Eigenvalue Distributions}
 \description{
   Density, distribution function, quantile function, and random
   generation for the maximum eigenvalue from a white Wishart matrix
@@ -65,5 +65,5 @@ rwishart.max(n, n.df, p.dim, var=1, beta=1)
     295--327.
 }
 \author{Patrick O. Perry}
-\seealso{\link{wishart.max.par}, \link{TracyWidom}}
+\seealso{\link{wishart.max.par}, \link{WishartSpike}, \link{TracyWidom}}
 \keyword{distribution}
