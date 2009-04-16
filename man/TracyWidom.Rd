@@ -21,7 +21,7 @@ rtw(n, beta=1)
   \item{p}{vector of probabilities.}
   \item{n}{number of observations. If \code{length(n) > 1}, the length
     is taken to be the number required.}
-  \item{beta}{the order parameter (1, 2, or 4)}
+  \item{beta}{the order parameter (1, 2, or 4).}
   \item{log, log.p}{logical; if TRUE, probabilities p are given as log(p).}
   \item{lower.tail}{logical; if TRUE (default), probabilities are
     \eqn{P[X \le x]}{P[X <= x]}, otherwise, \eqn{P[X > x]}{P[X > x]}.}
@@ -56,17 +56,17 @@ rtw(n, beta=1)
   Random variates are generated using the inverse CDF.
 }
 \references{
-  Tracy, C.A. and Widom, H. (1994). Level-spacing distributions and the
-    Airy kernel. \emph{Communications in Mathematical Physics.}
-    \bold{159} 151--174.
-    
-  Tracy, C.A. and Widom, H. (1996). On orthogonal and symplectic matrix 
-    ensembles. \emph{Communications in Mathematical Phsyics.}
-    \bold{177} 727--754.
-    
   Dieng, M. (2006). Distribution functions for edge eigenvalues in orthogonal
     and symplectic ensembles: \enc{Painlevé}{Painleve} representations.
-    \emph{available on the ArXiv as ArXiv:math.PR/0506586}.
+    \emph{arXiv:math/0506586v2 [math.PR]}.
+
+  Tracy, C.A. and Widom, H. (1994). Level-spacing distributions and the
+    Airy kernel. \emph{Communications in Mathematical Physics}
+    \bold{159}, 151--174.
+    
+  Tracy, C.A. and Widom, H. (1996). On orthogonal and symplectic matrix 
+    ensembles. \emph{Communications in Mathematical Phsyics}
+    \bold{177}, 727--754.
 }
 \author{Patrick O. Perry}
 \keyword{distribution}

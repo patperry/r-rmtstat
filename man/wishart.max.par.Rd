@@ -4,21 +4,21 @@
 \description{
   Centering and scaling for the maximum eigenvalue from a white Wishart
   matrix (sample covariance matrix) with with \code{n.df} degrees of freedom,
-  \code{p.dim} dimensions, variance \code{var}, and order parameter
-  \code{beta}.
+  \code{p.dim} dimensions, population variance \code{var}, and order
+  parameter \code{beta}.
 }
 \usage{
   wishart.max.par(n.df, p.dim, var=1, beta=1)
 }
 \arguments{
-  \item{n.df}{the number of degrees of freedom in the Wishart matrix}
-  \item{p.dim}{the number of dimensions (variables) in the Wishart matrix}
-  \item{var}{the variance of the elements in the data matrix}
-  \item{beta}{the order parameter (1 or 2)}
+  \item{n.df}{the number of degrees of freedom for the Wishart matrix.}
+  \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.}
+  \item{var}{the population variance.}
+  \item{beta}{the order parameter (1 or 2).}
 }
 \value{
-  \item{center}{gives the centering}
-  \item{scale}{gives the scaling}
+  \item{center}{gives the centering.}
+  \item{scale}{gives the scaling.}
 }
 \details{
   If \code{beta} is not specified, it assumes the default value of \code{1}.
@@ -33,8 +33,7 @@
 \references{
   El Karoui, N. (2006). A rate of convergence result for the largest 
     eigenvalue of complex white Wishart matrices. 
-    \emph{Annals of Probability}. 
-    \bold{34} 2077--2117.
+    \emph{Annals of Probability} \bold{34}, 2077--2117.
 
   Ma, Z. (2008). Accuracy of the Tracy-Widom limit for the largest eigenvalue 
     in white Wishart matrices.

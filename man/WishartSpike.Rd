@@ -24,9 +24,9 @@ rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1)
   \item{n}{number of observations. If \code{length(n) > 1}, the length
     is taken to be the number required.}
   \item{spike}{the value of the spike.}
-  \item{n.df}{the number of degrees of freedom in the Wishart matrix.}
-  \item{p.dim}{the number of dimensions (variables) in the Wishart matrix.}
-  \item{var}{the variance parameter.}
+  \item{n.df}{the number of degrees of freedom for the Wishart matrix.}
+  \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.}
+  \item{var}{the population (noise) variance.}
   \item{log, log.p}{logical; if TRUE, probabilities p are given as log(p).}
   \item{lower.tail}{logical; if TRUE (default), probabilities are
     \eqn{P[X \le x]}{P[X <= x]}, otherwise, \eqn{P[X > x]}{P[X > x]}.}
