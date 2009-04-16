@@ -27,7 +27,7 @@ dwishart.spike <- function( x, spike, n.df=NA, p.dim=NA, var=1,
                             log = FALSE ) {
     params <- wishart.spike.par( spike, n.df, p.dim, var )
     d      <- dnorm( x, mean=params$center, sd=params$scale, log=log )
-    c
+    d
 }
 
 pwishart.spike <- function( q, spike, n.df=NA, p.dim=NA, var=1, 
