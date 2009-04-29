@@ -8,13 +8,14 @@
   \code{diag(spike+var,var,var,...,var)}.
 }
 \usage{
-  wishart.spike.par( spike, n.df=NA, p.dim=NA, var=1 )
+  wishart.spike.par( spike, n.df=NA, p.dim=NA, var=1, beta=1 )
 }
 \arguments{
   \item{spike}{the value of the spike.}
   \item{n.df}{the number of degrees of freedom for the Wishart matrix.}
-  \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.}
+  \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.} 
   \item{var}{the population (noise) variance.}
+  \item{beta}{the order parameter (1 or 2).}  
 }
 \value{
   \item{center}{gives the centering.}
@@ -28,6 +29,9 @@
   
   For the spiked distribution to exist, \code{spike} must be greater than
   \code{sqrt(p.dim/n.df)*var}.
+  
+  Supported values for \code{beta} are \code{1} for real data and
+  and \code{2} for complex data.
 }
 \references{
   Baik, J., Ben Arous, G., and \enc{Péché}{Peche}, S. (2005).

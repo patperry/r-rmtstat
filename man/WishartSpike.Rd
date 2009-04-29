@@ -13,10 +13,10 @@
   \code{diag(spike+var,var,var,...,var)}.
 }
 \usage{
-dwishart.spike(x, spike, n.df=NA, p.dim=NA, var=1, log = FALSE)
-pwishart.spike(q, spike, n.df=NA, p.dim=NA, var=1, lower.tail = TRUE, log.p = FALSE)
-qwishart.spike(p, spike, n.df=NA, p.dim=NA, var=1, lower.tail = TRUE, log.p = FALSE)
-rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1)
+dwishart.spike(x, spike, n.df=NA, p.dim=NA, var=1, beta=1, log = FALSE)
+pwishart.spike(q, spike, n.df=NA, p.dim=NA, var=1, beta=1, lower.tail = TRUE, log.p = FALSE)
+qwishart.spike(p, spike, n.df=NA, p.dim=NA, var=1, beta=1, lower.tail = TRUE, log.p = FALSE)
+rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1, beta=1)
 }
 \arguments{
   \item{x,q}{vector of quantiles.}
@@ -27,6 +27,7 @@ rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1)
   \item{n.df}{the number of degrees of freedom for the Wishart matrix.}
   \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.}
   \item{var}{the population (noise) variance.}
+  \item{beta}{the order parameter (1 or 2).}
   \item{log, log.p}{logical; if TRUE, probabilities p are given as log(p).}
   \item{lower.tail}{logical; if TRUE (default), probabilities are
     \eqn{P[X \le x]}{P[X <= x]}, otherwise, \eqn{P[X > x]}{P[X > x]}.}
@@ -48,6 +49,9 @@ rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1)
 
   For the spiked distribution to exist, \code{spike} must be greater than
   \code{sqrt(p.dim/n.df)*var}.
+  
+  Supported values for \code{beta} are \code{1} for real data and
+  and \code{2} for complex data.
 }
 \references{
   Baik, J., Ben Arous, G., and \enc{Péché}{Peche}, S. (2005).
