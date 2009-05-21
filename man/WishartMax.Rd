@@ -64,6 +64,6 @@ rWishartMax(n, ndf, pdim, var=1, beta=1)
     principal component analysis. \emph{Annals of Statistics.} \bold{29}
     295--327.
 }
-\author{Patrick O. Perry}
+\author{Iain M. Johnstone, Zongming Ma, Patrick O. Perry and Morteza Shahram}
 \seealso{\link{WishartMaxPar}, \link{WishartSpike}, \link{TracyWidom}}
 \keyword{distribution}

@@ -39,6 +39,6 @@
     in white Wishart matrices.
     \emph{arXiv:0810.1329v1 [math.ST]}.
 }
-\author{Patrick O. Perry}
+\author{Iain M. Johnstone, Zongming Ma, Patrick O. Perry and Morteza Shahram}
 \seealso{\link{WishartMax}, \link{TracyWidom}}
 \keyword{distribution}

@@ -41,5 +41,5 @@ dmp( x, ndf=NA, pdim=NA, var=1, svr=ndf/pdim, log = FALSE )
     \bold{1},
     457--483.
 }
-\author{Patrick O. Perry}
+\author{Iain M. Johnstone, Zongming Ma, Patrick O. Perry and Morteza Shahram}
 \keyword{distribution}

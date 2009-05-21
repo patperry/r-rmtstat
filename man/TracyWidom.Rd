@@ -68,5 +68,5 @@ rtw(n, beta=1)
     ensembles. \emph{Communications in Mathematical Phsyics}
     \bold{177}, 727--754.
 }
-\author{Patrick O. Perry}
+\author{Iain M. Johnstone, Zongming Ma, Patrick O. Perry and Morteza Shahram}
 \keyword{distribution}

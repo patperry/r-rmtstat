@@ -48,6 +48,6 @@
     dimensional spiked covariance model.
     \emph{Statistica Sinica} \bold{17}, 1617--1642.
 }
-\author{Patrick O. Perry}
+\author{Iain M. Johnstone, Zongming Ma, Patrick O. Perry and Morteza Shahram}
 \seealso{\link{WishartSpike}}
 \keyword{distribution}
