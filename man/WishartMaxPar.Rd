@@ -1,24 +1,24 @@
-\name{wishart.max.par}
-\alias{wishart.max.par}
+\name{WishartMaxPar}
+\alias{WishartMaxPar}
 \title{White Wishart Maximum Eigenvalue Centering and Scaling}
 \description{
   Centering and scaling for the maximum eigenvalue from a white Wishart
-  matrix (sample covariance matrix) with with \code{n.df} degrees of freedom,
-  \code{p.dim} dimensions, population variance \code{var}, and order
+  matrix (sample covariance matrix) with with \code{ndf} degrees of freedom,
+  \code{pdim} dimensions, population variance \code{var}, and order
   parameter \code{beta}.
 }
 \usage{
-  wishart.max.par(n.df, p.dim, var=1, beta=1)
+  WishartMaxPar(ndf, pdim, var=1, beta=1)
 }
 \arguments{
-  \item{n.df}{the number of degrees of freedom for the Wishart matrix.}
-  \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.}
+  \item{ndf}{the number of degrees of freedom for the Wishart matrix.}
+  \item{pdim}{the number of dimensions (variables) for the Wishart matrix.}
   \item{var}{the population variance.}
   \item{beta}{the order parameter (1 or 2).}
 }
 \value{
-  \item{center}{gives the centering.}
-  \item{scale}{gives the scaling.}
+  \item{centering}{gives the centering.}
+  \item{scaling}{gives the scaling.}
 }
 \details{
   If \code{beta} is not specified, it assumes the default value of \code{1}.

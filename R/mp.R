@@ -1,6 +1,6 @@
 
-dmp <- function( x, n.df=NA, p.dim=NA, var=1, concentration=n.df/p.dim, log = FALSE ) {
-    gamma          <- concentration
+dmp <- function( x, ndf=NA, pdim=NA, var=1, svr=ndf/pdim, log = FALSE ) {
+    gamma          <- svr
     
     inv.gamma.sqrt <- sqrt( 1/gamma )
     a              <- var*( 1 - inv.gamma.sqrt )^2

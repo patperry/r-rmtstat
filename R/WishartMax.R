@@ -1,5 +1,5 @@
 
-wishart.max.par <- (function() {
+WishartMaxPar <- (function() {
     mu <- function( n,p ) {
         n.sqrt <- sqrt( n )
         p.sqrt <- sqrt( p )
@@ -39,9 +39,9 @@ wishart.max.par <- (function() {
         res
     }
     
-    function( n.df, p.dim, var=1, beta=1 ) {
-        n <- n.df
-        p <- p.dim
+    function( ndf, pdim, var=1, beta=1 ) {
+        n <- ndf
+        p <- pdim
         
         if( beta == 1 ) {
             m <- mu.real( n,p )
@@ -56,38 +56,38 @@ wishart.max.par <- (function() {
         center <- var*( m/n )
         scale  <- var*( s/n )
     
-        list( center=center, scale=scale )
+        list( centering=center, scaling=scale )
     }
 })()
 
-dwishart.max <- function( x, n.df, p.dim, var=1, beta=1, log = FALSE ) {
-    params <- wishart.max.par( n.df, p.dim, var, beta )
-    x.tw   <- ( x - params$center )/( params$scale )
+dWishartMax <- function( x, ndf, pdim, var=1, beta=1, log = FALSE ) {
+    params <- WishartMaxPar( ndf, pdim, var, beta )
+    x.tw   <- ( x - params$centering )/( params$scaling )
     d.tw   <- dtw( x, beta, log )
-    d      <- ifelse( log, d.tw - log( params$scale ),
-                  d.tw / ( params$scale ) )
+    d      <- ifelse( log, d.tw - log( params$scaling ),
+                  d.tw / ( params$scaling ) )
     d
 }
 
-pwishart.max <- function( q, n.df, p.dim, var=1, beta=1, 
+pWishartMax <- function( q, ndf, pdim, var=1, beta=1, 
                       lower.tail = TRUE, log.p = FALSE ) {
-    params <- wishart.max.par( n.df, p.dim, var, beta )
-    q.tw   <- ( q - params$center )/( params$scale )
+    params <- WishartMaxPar( ndf, pdim, var, beta )
+    q.tw   <- ( q - params$centering )/( params$scaling )
     p      <- ptw( q.tw, beta, lower.tail, log.p )
     p
 }
 
-qwishart.max <- function( p, n.df, p.dim, var=1, beta=1,
+qWishartMax <- function( p, ndf, pdim, var=1, beta=1,
                       lower.tail = TRUE, log.p = FALSE ) {
-    params <- wishart.max.par( n.df, p.dim, var, beta )
+    params <- WishartMaxPar( ndf, pdim, var, beta )
     q.tw   <- qtw( p, beta, lower.tail, log.p )
-    q      <- params$center + q.tw*( params$scale )
+    q      <- params$centering + q.tw*( params$scaling )
     q
 }
 
-rwishart.max <- function( n, n.df, p.dim, var=1, beta=1 ) {
-    params <- wishart.max.par( n.df, p.dim, var, beta )
+rWishartMax <- function( n, ndf, pdim, var=1, beta=1 ) {
+    params <- WishartMaxPar( ndf, pdim, var, beta )
     x.tw   <- rtw( n, beta )
-    x      <- params$center + x.tw*( params$scale )
+    x      <- params$centering + x.tw*( params$scaling )
     x
 }

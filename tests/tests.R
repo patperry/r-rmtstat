@@ -73,7 +73,7 @@ test.qtw.log.tail <- function( beta ) {
     max( abs( ptw( x, beta, lower.tail=FALSE ) - p ) ) < 5e-8
 }
 
-test.wishart.spike.par <- function() {
+test.WishartSpikePar <- function() {
     n      <- 10
     p      <- 99
     ratio  <- p/n
@@ -81,9 +81,9 @@ test.wishart.spike.par <- function() {
     spike  <- ( sqrt( ratio ) + 0.01 )*var
     center <- ( spike + var )*( 1 + ratio*( var/spike ) )
     scale  <- ( spike + var )*sqrt( 2*( 1 - ratio*( var/spike )^2 )/n )
-    params <- wishart.spike.par( spike, n, p, var )
+    params <- WishartSpikePar( spike, n, p, var )
     
-    identical( params, list( center=center, scale=scale ) )
+    identical( params, list( centering=center, scaling=scale ) )
 }
 
 tests <- list( function() { test.ptw( 1 ) }
@@ -126,7 +126,7 @@ tests <- list( function() { test.ptw( 1 ) }
              , function() { test.dtw.log( 2 ) }
              , function() { test.dtw.log( 4 ) }
 
-             , function() { test.wishart.spike.par() }
+             , function() { test.WishartSpikePar() }
              )
 
 test.all <- function() {

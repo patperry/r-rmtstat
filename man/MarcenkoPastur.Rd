@@ -8,14 +8,14 @@
   white Wishart matrix.
 }
 \usage{
-dmp( x, n.df=NA, p.dim=NA, var=1, concentration=n.df/p.dim, log = FALSE )
+dmp( x, ndf=NA, pdim=NA, var=1, svr=ndf/pdim, log = FALSE )
 }
 \arguments{
   \item{x}{vector of quantiles.}
-  \item{n.df}{the number of degrees of freedom for the Wishart matrix.}
-  \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.}
+  \item{ndf}{the number of degrees of freedom for the Wishart matrix.}
+  \item{pdim}{the number of dimensions (variables) for the Wishart matrix.}
   \item{var}{the population variance.}
-  \item{concentration}{the number of degrees of freedom per dimension.}   
+  \item{svr}{samples to variables ratio; the number of degrees of freedom per dimension.}   
   \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
 \value{
@@ -23,15 +23,15 @@ dmp( x, n.df=NA, p.dim=NA, var=1, concentration=n.df/p.dim, log = FALSE )
 }
 \details{
   The \code{concentration} can either be given explicitly, or else computed
-  from the given \code{n.df} and \code{p.dim}.  If \code{var} is not 
+  from the given \code{ndf} and \code{pdim}.  If \code{var} is not 
   specified, it assumes the default of \code{1}.
   
   The \enc{Marčenko}{Marcenko}-Pastur law is the limit of the random 
-  probability measure which puts equal mass on all \code{p.dim} eigenvalues
-  of a normalized \code{p.dim}-dimensional white Wishart matrix with 
-  \code{n.df} degrees of freedom and scale parameter
-  \code{diag(var, var, ..., var)}.  It is assumed that \code{n.df} goes to 
-  infinity, and \code{n.df/p.dim} goes to nonzero constant called the 
+  probability measure which puts equal mass on all \code{pdim} eigenvalues
+  of a normalized \code{pdim}-dimensional white Wishart matrix with 
+  \code{ndf} degrees of freedom and scale parameter
+  \code{diag(var, var, ..., var)}.  It is assumed that \code{ndf} goes to 
+  infinity, and \code{ndf/pdim} goes to nonzero constant called the 
   \code{concentration}.
 }
 \references{

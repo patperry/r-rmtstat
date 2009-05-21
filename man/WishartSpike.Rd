@@ -1,22 +1,22 @@
 \name{WishartSpike}
 \alias{WishartSpike}
-\alias{dwishart.spike}
-\alias{pwishart.spike}
-\alias{qwishart.spike}
-\alias{rwishart.spike}
+\alias{dWishartSpike}
+\alias{pWishartSpike}
+\alias{qWishartSpike}
+\alias{rWishartSpike}
 \title{The Spiked Wishart Maximum Eigenvalue Distributions}
 \description{
   Density, distribution function, quantile function, and random
   generation for the maximum eigenvalue from a spiked Wishart matrix
-  (sample covariance matrix) with \code{n.df} degrees of freedom,
-  \code{p.dim} dimensions, and population covariance matrix 
+  (sample covariance matrix) with \code{ndf} degrees of freedom,
+  \code{pdim} dimensions, and population covariance matrix 
   \code{diag(spike+var,var,var,...,var)}.
 }
 \usage{
-dwishart.spike(x, spike, n.df=NA, p.dim=NA, var=1, beta=1, log = FALSE)
-pwishart.spike(q, spike, n.df=NA, p.dim=NA, var=1, beta=1, lower.tail = TRUE, log.p = FALSE)
-qwishart.spike(p, spike, n.df=NA, p.dim=NA, var=1, beta=1, lower.tail = TRUE, log.p = FALSE)
-rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1, beta=1)
+dWishartSpike(x, spike, ndf=NA, pdim=NA, var=1, beta=1, log = FALSE)
+pWishartSpike(q, spike, ndf=NA, pdim=NA, var=1, beta=1, lower.tail = TRUE, log.p = FALSE)
+qWishartSpike(p, spike, ndf=NA, pdim=NA, var=1, beta=1, lower.tail = TRUE, log.p = FALSE)
+rWishartSpike(n, spike, ndf=NA, pdim=NA, var=1, beta=1)
 }
 \arguments{
   \item{x,q}{vector of quantiles.}
@@ -24,8 +24,8 @@ rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1, beta=1)
   \item{n}{number of observations. If \code{length(n) > 1}, the length
     is taken to be the number required.}
   \item{spike}{the value of the spike.}
-  \item{n.df}{the number of degrees of freedom for the Wishart matrix.}
-  \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.}
+  \item{ndf}{the number of degrees of freedom for the Wishart matrix.}
+  \item{pdim}{the number of dimensions (variables) for the Wishart matrix.}
   \item{var}{the population (noise) variance.}
   \item{beta}{the order parameter (1 or 2).}
   \item{log, log.p}{logical; if TRUE, probabilities p are given as log(p).}
@@ -33,22 +33,22 @@ rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1, beta=1)
     \eqn{P[X \le x]}{P[X <= x]}, otherwise, \eqn{P[X > x]}{P[X > x]}.}
 }
 \value{
-  \code{dwishart.spike} gives the density,
-  \code{pwishart.spike} gives the distribution function,
-  \code{qwishart.spike} gives the quantile function, and
-  \code{rwishart.spike} generates random deviates.  
+  \code{dWishartSpike} gives the density,
+  \code{pWishartSpike} gives the distribution function,
+  \code{qWishartSpike} gives the quantile function, and
+  \code{rWishartSpike} generates random deviates.  
 }
 \details{
   The spiked Wishart is a random sample covariance matrix from
-  multivariate normal data with \code{n.df} observations in \code{p.dim} 
+  multivariate normal data with \code{ndf} observations in \code{pdim} 
   dimensions.  The spiked Wishart has one population covariance eigenvalue
   equal to \code{spike+var} and the rest equal to \code{var}.  These
   functions are related to the limiting distribution of the largest eigenvalue
-  from such a matrix when \code{n.df} and \code{p.dim} both tending to
+  from such a matrix when \code{ndf} and \code{pdim} both tending to
   infinity, with their ratio tending to a nonzero constant.
 
   For the spiked distribution to exist, \code{spike} must be greater than
-  \code{sqrt(p.dim/n.df)*var}.
+  \code{sqrt(pdim/ndf)*var}.
   
   Supported values for \code{beta} are \code{1} for real data and
   and \code{2} for complex data.
@@ -70,5 +70,5 @@ rwishart.spike(n, spike, n.df=NA, p.dim=NA, var=1, beta=1)
     1617--1642.
 }
 \author{Patrick O. Perry}
-\seealso{\link{wishart.spike.par}, \link{WishartMax}}
+\seealso{\link{WishartSpikePar}, \link{WishartMax}}
 \keyword{distribution}

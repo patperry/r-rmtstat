@@ -1,6 +1,6 @@
 export( dmp,
         dtw, ptw, qtw, rtw, 
-     	dwishart.max, pwishart.max, qwishart.max, rwishart.max,
-        wishart.max.par,
-        dwishart.spike, pwishart.spike, qwishart.spike, rwishart.spike,
-        wishart.spike.par )
+     	dWishartMax, pWishartMax, qWishartMax, rWishartMax,
+        WishartMaxPar,
+        dWishartSpike, pWishartSpike, qWishartSpike, rWishartSpike,
+        WishartSpikePar )

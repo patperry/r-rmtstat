@@ -1,25 +1,25 @@
-\name{wishart.spike.par}
-\alias{wishart.spike.par}
+\name{WishartSpikePar}
+\alias{WishartSpikePar}
 \title{Spiked Wishart Eigenvalue Centering and Scaling}
 \description{
   Centering and scaling for the sample eigenvalue from a spiked
-  Wishart matrix (sample covariance matrix) with \code{n.df} degrees of
-  freedom, \code{p.dim} dimensions, and population covariance matrix 
+  Wishart matrix (sample covariance matrix) with \code{ndf} degrees of
+  freedom, \code{pdim} dimensions, and population covariance matrix 
   \code{diag(spike+var,var,var,...,var)}.
 }
 \usage{
-  wishart.spike.par( spike, n.df=NA, p.dim=NA, var=1, beta=1 )
+  WishartSpikePar( spike, ndf=NA, pdim=NA, var=1, beta=1 )
 }
 \arguments{
   \item{spike}{the value of the spike.}
-  \item{n.df}{the number of degrees of freedom for the Wishart matrix.}
-  \item{p.dim}{the number of dimensions (variables) for the Wishart matrix.} 
+  \item{ndf}{the number of degrees of freedom for the Wishart matrix.}
+  \item{pdim}{the number of dimensions (variables) for the Wishart matrix.} 
   \item{var}{the population (noise) variance.}
   \item{beta}{the order parameter (1 or 2).}  
 }
 \value{
-  \item{center}{gives the centering.}
-  \item{scale}{gives the scaling.}
+  \item{centering}{gives the centering.}
+  \item{scaleing}{gives the scaling.}
 }
 \details{
   The returned values give appropriate centering and scaling for the largest
@@ -28,7 +28,7 @@
   with mean 0 and variance 1.
   
   For the spiked distribution to exist, \code{spike} must be greater than
-  \code{sqrt(p.dim/n.df)*var}.
+  \code{sqrt(pdim/ndf)*var}.
   
   Supported values for \code{beta} are \code{1} for real data and
   and \code{2} for complex data.
