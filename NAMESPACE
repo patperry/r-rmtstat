@@ -1,4 +1,4 @@
-export( dmp,
+export( dmp, pmp, qmp, rmp,
         dtw, ptw, qtw, rtw, 
      	dWishartMax, pWishartMax, qWishartMax, rWishartMax,
         WishartMaxPar,
