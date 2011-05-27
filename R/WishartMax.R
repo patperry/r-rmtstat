@@ -63,9 +63,10 @@ WishartMaxPar <- (function() {
 dWishartMax <- function( x, ndf, pdim, var=1, beta=1, log = FALSE ) {
     params <- WishartMaxPar( ndf, pdim, var, beta )
     x.tw   <- ( x - params$centering )/( params$scaling )
-    d.tw   <- dtw( x, beta, log )
-    d      <- ifelse( log, d.tw - log( params$scaling ),
-                  d.tw / ( params$scaling ) )
+    d.tw   <- dtw( x.tw, beta, log )
+    d <- if (log)
+        d.tw - log( params$scaling )
+    else d.tw / ( params$scaling )
     d
 }
 
