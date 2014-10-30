@@ -7,15 +7,14 @@ Maintainer:  Patrick O. Perry <pperry@stern.nyu.edu>
 Description: 
     Functions for working with the Tracy-Widom laws and other distributions 
     related to the eigenvalues of large Wishart matrices.
-    .
     The tables for computing the Tracy-Widom densities and distribution
     functions were computed by Momar Dieng's MATLAB package "RMLab"
     (formerly available on his homepage at 
     http://math.arizona.edu/~momar/research.htm ).
-    .
     This package is part of a collaboration between Iain Johnstone, 
     Zongming Ma, Patrick Perry, and Morteza Shahram.  It will soon be
     replaced by a package with more accuracy and built-in support for
     relevant statistical tests.
-License:     BSD_3_clause + file LICENSE
+License:     file LICENSE
+License_is_FOSS: yes
 Encoding:    UTF-8
