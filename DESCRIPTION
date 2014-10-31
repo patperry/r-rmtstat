@@ -15,6 +15,5 @@ Description:
     Zongming Ma, Patrick Perry, and Morteza Shahram.  It will soon be
     replaced by a package with more accuracy and built-in support for
     relevant statistical tests.
-License:     file LICENSE
-License_is_FOSS: yes
+License:     BSD_3_clause + file LICENSE
 Encoding:    UTF-8
