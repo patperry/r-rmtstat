@@ -80,7 +80,7 @@ qmp <- function( p, ndf=NA, pdim=NA, var=1, svr=ndf/pdim,
 
     q      <- NULL
     if ( p <= 0 ) {
-        q <- ifelse( svr <= 1, -0, parmams$lower )
+        q <- ifelse( svr <= 1, -0, params$lower )
     } else if ( p >= 1 ) {
         q <- params$upper
     }
