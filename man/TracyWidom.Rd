@@ -48,9 +48,8 @@ rtw(n, beta=1)
   accuracy of about \code{3.4e-08}. For all other points, the values are 
   gotten from a cubic Hermite polynomial interpolation. The MATLAB software
   for computing the grid of values is part of RMLab, a package written by 
-  Momar Dieng which is available on his homepage at
-  \url{http://math.arizona.edu/~momar/research.htm}.
-  
+  Momar Dieng.
+    
   The quantiles are computed via bisection using \link{uniroot}.
   
   Random variates are generated using the inverse CDF.
