@@ -3,7 +3,7 @@ Version:     0.3.1
 Date:        2022-04-08
 Title:       Distributions, Statistics and Tests Derived from Random Matrix Theory
 Author:      Iain M. Johnstone, Zongming Ma, Patrick O. Perry and Morteza Shahram.
-Maintainer:  Patrick O. Perry <patperry@gmail.com>
+Maintainer:  Evan Biederstedt <evan.biederstedt@gmail.com>
 Description: 
     Functions for working with the Tracy-Widom laws and other distributions 
     related to the eigenvalues of large Wishart matrices.
